@@ -1,0 +1,31 @@
+{
+  "name": "lowdb-titanium-adapter",
+  "version": "1.0.0",
+  "description": "Titanium SDK adapter for the LowDB embedded database",
+  "author": {
+    "name": "Isaac Whitfield",
+    "email": "iw@whitfin.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/whitfin/lowdb-titanium-adapter.git"
+  },
+  "bugs": "http://github.com/whitfin/lowdb-titanium-adapter/issues",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "modules",
+    "require"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js ./"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-axway": "4.2.2",
+    "lowdb": "*"
+  },
+  "optionalDependencies": {
+    "lowdb": "*"
+  }
+}
