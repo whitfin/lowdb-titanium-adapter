@@ -1,5 +1,6 @@
 # lowdb-titanium-adapter
 [![Build Status](https://img.shields.io/travis/whitfin/lowdb-titanium-adapter.svg?label=unix)](https://travis-ci.org/whitfin/lowdb-titanium-adapter)
+![npm](https://img.shields.io/npm/v/lowdb-titanium-adapter.svg)
 
 Titanium SDK adapter for the [LowDB](https://github.com/typicode/lowdb)
 embedded database. You can use this library to persist LowDB databases
