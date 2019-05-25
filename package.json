@@ -14,8 +14,10 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "keywords": [
-    "modules",
-    "require"
+    "json",
+    "database",
+    "embedded",
+    "titanium-sdk"
   ],
   "scripts": {
     "lint": "eslint --ext .js ./"
