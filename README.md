@@ -34,9 +34,14 @@ const adapter = new TitaniumAdapter('my-database.json', {
   },
 });
 
-// Create the database
-const db = low(adapter);
+// Create the database instance.
+//
+// This requires an async context, so you need to use a function
+// as shown below until we can use `await` in the main `app.js`.
+let db; (async () => db = await low(adapter));
 ```
 
-For futher usage, check out the [LowDB](https://github.com/typicode/lowdb)
-documentation as the API is exactly the same.
+There is also a more complete [example app](example/) available - just
+remember to run `npm install` before you try to run it. For any further
+usage, check out the [LowDB](https://github.com/typicode/lowdb) docs as
+the API is exactly the same.

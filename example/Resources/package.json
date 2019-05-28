@@ -1,0 +1,10 @@
+{
+  "name": "lowdb-titanium-example",
+  "version": "1.0",
+  "main": "app.js",
+  "dependencies": {
+    "lowdb": "1.0.0",
+    "lowdb-titanium-adapter": "1.0.0",
+    "lodash-id": "0.14.0"
+  }
+}
