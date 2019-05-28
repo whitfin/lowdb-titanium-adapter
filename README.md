@@ -3,8 +3,11 @@
 ![npm](https://img.shields.io/npm/v/lowdb-titanium-adapter.svg)
 
 Titanium SDK adapter for the [LowDB](https://github.com/typicode/lowdb)
-embedded database. You can use this library to persist LowDB databases
-inside Titanium applications using the Titanium API.
+embedded database.
+
+You can use this library to persist LowDB databases inside Titanium applications
+using the Titanium API. Everything else operates normally as LowDB would do in
+any other environment, so see their repository for further information.
 
 ### Usage
 
