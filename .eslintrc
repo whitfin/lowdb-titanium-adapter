@@ -3,6 +3,7 @@
     "axway/env-node"
   ],
   "globals": {
-    "Ti": true
+    "Ti": true,
+    "Titanium": true
   }
 }
