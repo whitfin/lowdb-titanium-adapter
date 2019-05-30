@@ -1,6 +1,6 @@
 {
   "name": "lowdb-titanium-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Titanium SDK adapter for the LowDB embedded database",
   "author": {
     "name": "Isaac Whitfield",
