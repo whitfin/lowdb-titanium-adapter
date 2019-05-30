@@ -15,17 +15,8 @@ const adapter = new TitaniumAdapter('my-database.json', {
     },
 });
 
+// Database handle
 let db;
-(async function () {
-    // Create the database
-    db = await low(adapter);
-
-    // Add some utilities
-    db._.mixin(lodashId);
-
-    // Set the initial state
-    await _reset();
-}());
 
 // Create our window instance
 let win = Ti.UI.createWindow({
@@ -58,14 +49,14 @@ let records = Ti.UI.createListView({
     headerTitle: 'Values',
     sections: [],
     templates: {
-        'default':  {
+        'default': {
             childTemplates: [
                 {
                     type: 'Ti.UI.Label',
                     bindId: 'value',
                     properties: {
-                        left: 10,
-                        height: 35
+                        left: 20,
+                        height: 44
                     }
                 },
                 {
@@ -78,7 +69,7 @@ let records = Ti.UI.createListView({
                         title: 'Remove'
                     },
                     events: {
-                        click: async function report (e) {
+                        click: async function report(e) {
                             await db
                                 .get('values')
                                 .removeById(e.itemId)
@@ -121,6 +112,18 @@ win.addEventListener('click', function (e) {
 win.add(insert);
 win.add(records);
 win.open();
+
+// Async initialization
+(async function () {
+    // Create the database
+    db = await low(adapter);
+
+    // Add some utilities
+    db._.mixin(lodashId);
+
+    // Set the initial state
+    await _reset();
+}());
 
 // Reset handler to re-populate the list view.
 //
