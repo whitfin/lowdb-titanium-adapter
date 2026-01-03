@@ -1,4 +1,5 @@
 # lowdb-titanium-adapter
+
 [![Build Status](https://img.shields.io/github/actions/workflow/status/whitfin/lowdb-titanium-adapter/ci.yml?branch=main)](https://github.com/whitfin/lowdb-titanium-adapter/actions) [![Published Version](https://img.shields.io/npm/v/lowdb-titanium-adapter.svg)](https://npmjs.com/package/lowdb-titanium-adapter) [![Published Downloads](https://img.shields.io/npm/dt/lowdb-titanium-adapter)](https://npmjs.com/package/lowdb-titanium-adapter)
 
 Titanium SDK adapter for the [LowDB](https://github.com/typicode/lowdb)
