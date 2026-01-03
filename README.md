@@ -1,6 +1,5 @@
 # lowdb-titanium-adapter
-[![Build Status](https://img.shields.io/travis/whitfin/lowdb-titanium-adapter.svg?label=unix)](https://travis-ci.org/whitfin/lowdb-titanium-adapter)
-![npm](https://img.shields.io/npm/v/lowdb-titanium-adapter.svg)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/whitfin/lowdb-titanium-adapter/ci.yml?branch=main)](https://github.com/whitfin/lowdb-titanium-adapter/actions) [![Published Version](https://img.shields.io/npm/v/lowdb-titanium-adapter.svg)](https://npmjs.com/package/lowdb-titanium-adapter) [![Published Downloads](https://img.shields.io/npm/dt/lowdb-titanium-adapter)](https://npmjs.com/package/lowdb-titanium-adapter)
 
 Titanium SDK adapter for the [LowDB](https://github.com/typicode/lowdb)
 embedded database.
@@ -22,26 +21,25 @@ API is still synchronous for the time being:
 
 ```javascript
 // Load our modules
-const low = require('lowdb');
-const TitaniumAdapter = require('lowdb-titanium-adapter');
+const low = require("lowdb");
+const TitaniumAdapter = require("lowdb-titanium-adapter");
 
 // Initialize the database to write to my-database.json
-const adapter = new TitaniumAdapter('my-database.json', {
+const adapter = new TitaniumAdapter("my-database.json", {
   // Describe the default schema.
   //
   // This will be used as the "base" state for your database. See the
   // LowDB documentation for more information. You can also handle this
   // by calling the `defaults()` method on your database instance.
-  defaultValue: {
-
-  },
+  defaultValue: {},
 });
 
 // Create the database instance.
 //
 // This requires an async context, so you need to use a function
 // as shown below until we can use `await` in the main `app.js`.
-let db; (async () => db = await low(adapter));
+let db;
+async () => (db = await low(adapter));
 ```
 
 There is also a more complete [example app](example/) available - just

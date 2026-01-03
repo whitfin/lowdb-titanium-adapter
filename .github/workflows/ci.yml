@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Node.js ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    container:
+      image: node:${{ matrix.node }}
+    strategy:
+      matrix:
+        node:
+          - lts
+          - 24
+          - 22
+          - 20
+          - 18
+          - 16
+          - 14
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm test --if-present
+      - run: npm run lint --if-present

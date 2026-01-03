@@ -20,12 +20,11 @@
     "titanium-sdk"
   ],
   "scripts": {
-    "lint": "eslint --ext .js ./"
+    "lint": "prettier --check . "
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-axway": "4.2.2",
-    "lowdb": "*"
+    "lowdb": "*",
+    "prettier": "^3.7.4"
   },
   "optionalDependencies": {
     "lowdb": "*"
